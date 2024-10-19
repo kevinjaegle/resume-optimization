@@ -1,10 +1,3 @@
-# Kevin Jägle
-
-**Berufsbezeichnung:** DevOps Engineer  
-**E-Mail:** kevinjaegle@outlook.de  
-**Telefon:** +49 15758178224  
-**Adresse:** 77716 Fischerbach  
-
 ## Über Mich
 Junior DevOps Engineer mit Erfahrung in Containerisierung, Automatisierung und Cloud-Technologien. Spezialisiert auf CI/CD-Pipelines und Blockchain-Technologien.
 
