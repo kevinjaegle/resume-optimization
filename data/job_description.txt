@@ -1,0 +1,1 @@
+Wir suchen einen DevOps Engineer mit fundierten Kenntnissen in CI/CD-Tools (z.B. Jenkins, Ansible), Erfahrung in der Cloud-Technologie und gute Kommunikationsfähigkeiten.
