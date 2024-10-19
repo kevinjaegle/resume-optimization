@@ -1,5 +1,4 @@
 # Lebenslauf-Optimierung
-
 Dieses Projekt nutzt die OpenAI API, um Lebensläufe automatisch an Stellenbeschreibungen anzupassen.
 
 ## Ordnerstruktur
