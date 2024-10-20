@@ -13,7 +13,6 @@ This project automates the process of optimizing a resume to align better with a
 
 ## Project Structure
 
-- **config/**: Directory for storing configuration files.
 - **data/**: Contains input data, such as sample resumes and job descriptions.
 - **output/**: Stores the output of optimized resumes.
 - **scripts/**: Contains the main Python script (`optimize_resume.py`) for optimizing the resume.
