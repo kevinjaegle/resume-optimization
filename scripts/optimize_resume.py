@@ -1,5 +1,5 @@
 import os
-import openai
+from openai import OpenAI
 from dotenv import load_dotenv
 
 # Load environment variables from .env file
@@ -12,11 +12,11 @@ if not api_key:
         "Warnung: OPENAI_API_KEY ist nicht gesetzt. Bitte füge ihn zu den Umgebungsvariablen oder zur .env Datei hinzu."
     )
 else:
-    openai.api_key = api_key
+    client = OpenAI(api_key=api_key)
 
     # Lebenslauf und Stellenbeschreibung definieren
     md_resume = """
-    
+
     ## Über Mich
     Junior DevOps Engineer mit Erfahrung in Containerisierung, Automatisierung und Cloud-Technologien. Spezialisiert auf CI/CD-Pipelines und Blockchain-Technologien.
 
@@ -85,17 +85,17 @@ else:
     """
 
     # API-Aufruf zur Anpassung des Lebenslaufs
-    response = openai.ChatCompletion.create(
-        model="gpt-4o-mini",
+    response = client.chat.completions.create(
         messages=[{"role": "user", "content": prompt}],
+        model="gpt-4o-mini",
         temperature=0.25,
     )
 
     # Angepassten Lebenslauf extrahieren
-    updated_resume = response["choices"][0]["message"]["content"].strip()
+    updated_resume = response.choices[0].message.content.strip()
 
     # Sicherstellen, dass der Ordner output existiert
-    output_dir = "../output"
+    output_dir = "output"
     os.makedirs(output_dir, exist_ok=True)
 
     # Angepassten Lebenslauf speichern
